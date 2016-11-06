@@ -1,14 +1,15 @@
 language: c
+
 # For doc-building dependencies.
 cache: pip
-  
+
 addons:
   apt:
     packages:
       - tk-dev
       - liblzma-dev
       - python-pip
-      
+
 matrix:
   include:
     - os: linux
