@@ -4,11 +4,12 @@ machine:
 
 dependencies:
   override:
+    - sudo apt-get -qq update
+    - sudo apt-get install -y clang
     - pip install -U pip
     - pyenv local 3.5.1
 
-
 test:
   override:
-    - case $CIRCLE_NODE_INDEX in 0) ./configure --with-pydebug && make -j && ./python -bb -E -W default -m test -r -w -uall -j0 ;; 1) cd Doc && make venv PYTHON=python3 && make html SPHINXBUILD="./venv/bin/python3 -m sphinx" SPHINXOPTS="-nW -q -b linkcheck" ;; 2) exit 0 ;; 3) exit 0 ;; esac:
+    - case $CIRCLE_NODE_INDEX in 0) ./configure --with-pydebug && make -j && ./python -bb -E -W default -m test -r -w -uall -j0 ;; 1) CC=clang ./configure --with-pydebug && make -j && ./python -bb -E -W default -m test -r -w -uall -j0 ;; 2) cd Doc && make venv PYTHON=python3 && make html SPHINXBUILD="./venv/bin/python3 -m sphinx" SPHINXOPTS="-nW -q -b linkcheck" ;; 3) exit 0 ;; esac:
         parallel: true
