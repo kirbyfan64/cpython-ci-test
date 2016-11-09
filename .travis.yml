@@ -10,23 +10,24 @@ addons:
       - liblzma-dev
       - python-pip
 
+os:
+  - linux
+  - osx
+
+compiler:
+  - clang
+  - gcc
+
+env:
+  - TESTING=cpython
+
 matrix:
   include:
     - os: linux
-      compiler: gcc
-      env:
-        - PYTHON=python
-    - os: linux
-      compiler: clang
-      env:
-        - PYTHON=python
-    - os: osx
-      compiler: clang  # gcc is just a symlink for clang.
-      env:
-        - PYTHON=python.exe
-    - os: linux
       language: python
       python: 3.5
+      env:
+        - TESTING=docs
       before_script:
         - cd Doc
         - make venv PYTHON=python3
@@ -39,7 +40,8 @@ before_script:
   - make -j4
 
 script:
-  - ./$PYTHON -bb -E -W default -m test -r -w -uall -j4
+  # `-r -w` implicitly provided as arguments to `test`.
+  - make test TESTOPTS="-uall -j4"
 
 notifications:
   email: false
