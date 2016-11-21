@@ -1,14 +1,10 @@
 language: c
+dist: trusty
+sudo: false
+group: beta
 
-# For doc-building dependencies.
+# To cache doc-building dependencies.
 cache: pip
-
-addons:
-  apt:
-    packages:
-      - tk-dev
-      - liblzma-dev
-      - python-pip
 
 os:
   - linux
@@ -34,13 +30,13 @@ matrix:
       script:
         - make html SPHINXBUILD="./venv/bin/python3 -m sphinx" SPHINXOPTS="-nW -q -b linkcheck"
 
-# Travis provides only 2 cores.
+# Travis provides only 2 cores, so don't overdue the parallelism and waste memory.
 before_script:
   - ./configure --with-pydebug
   - make -j4
 
 script:
-  # `-r -w` implicitly provided as arguments to `test`.
+  # `-r -w` implicitly provided through `make test`.
   - make test TESTOPTS="-uall -j4"
 
 notifications:
