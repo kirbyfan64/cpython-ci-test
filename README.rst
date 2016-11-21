@@ -16,9 +16,9 @@ Code coverage
 
 Codecov
 -------
-.. image:: https://codecov.io/gh/brettcannon/cpython-ci-test/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/brettcannon/cpython-ci-test
 
+.. image:: https://codecov.io/gh/brettcannon/cpython-ci-test/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/brettcannon/cpython-ci-test
 
 
 This is Python version 3.7.0 alpha 1
