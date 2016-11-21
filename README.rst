@@ -5,12 +5,7 @@ See `.travis.yml <https://github.com/brettcannon/cpython-ci-test/blob/master/.tr
 .. image:: https://travis-ci.org/brettcannon/cpython-ci-test.svg?branch=master
     :target: https://travis-ci.org/brettcannon/cpython-ci-test
 
-CircleCI
-========
-See `circle.yml <https://github.com/brettcannon/cpython-ci-test/blob/master/circle.yml>`_ for configuration.
-
-.. image:: https://circleci.com/gh/brettcannon/cpython-ci-test/tree/master.svg?style=svg
-    :target: https://circleci.com/gh/brettcannon/cpython-ci-test/tree/master
+[CircleCI](https://circleci.com/) was considered, but [Travis was chosen in the end](https://mail.python.org/pipermail/core-workflow/2016-November/000716.html).
 
 This is Python version 3.7.0 alpha 1
 ====================================
