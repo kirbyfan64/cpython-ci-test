@@ -1,11 +1,25 @@
+CI
+==
+
 Travis
-======
+------
 See `.travis.yml <https://github.com/brettcannon/cpython-ci-test/blob/master/.travis.yml>`_ for configuration.
 
 .. image:: https://travis-ci.org/brettcannon/cpython-ci-test.svg?branch=master
     :target: https://travis-ci.org/brettcannon/cpython-ci-test
 
 `CircleCI <https://circleci.com/>`__ was considered, but `Travis was chosen in the end <https://mail.python.org/pipermail/core-workflow/2016-November/000716.html>`__.
+
+
+Code coverage
+=============
+
+Codecov
+-------
+.. image:: https://codecov.io/gh/brettcannon/cpython-ci-test/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/brettcannon/cpython-ci-test
+
+
 
 This is Python version 3.7.0 alpha 1
 ====================================
