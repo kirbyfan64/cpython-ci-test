@@ -8,7 +8,9 @@ cache: pip
 
 os:
   - linux
-  - osx
+  # macOS builds are disabled as the machines are under-provisioned on Travis,
+  # adding up to an extra hour completing a full CI run.
+  #- osx
 
 compiler:
   - clang
