@@ -21,6 +21,13 @@ Codecov
     :target: https://codecov.io/gh/brettcannon/cpython-ci-test
 
 
+Coveralls
+---------
+
+.. image:: https://coveralls.io/repos/github/brettcannon/cpython-ci-test/badge.svg?branch=master
+    :target: https://coveralls.io/github/brettcannon/cpython-ci-test?branch=master
+
+
 This is Python version 3.7.0 alpha 1
 ====================================
 
