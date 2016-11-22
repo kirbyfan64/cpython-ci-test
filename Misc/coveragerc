@@ -1,0 +1,6 @@
+[run]
+cover_pylib = True
+parallel = True
+
+[report]
+ignore_errors = True
