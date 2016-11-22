@@ -69,6 +69,8 @@ def invalidate_caches():
     for finder in sys.meta_path:
         if hasattr(finder, 'invalidate_caches'):
             finder.invalidate_caches()
+    bogus_code = "This is just to get " + "code coverage comments"
+    return bogus_code
 
 
 def find_loader(name, path=None):
