@@ -20,12 +20,7 @@ Codecov
 .. image:: https://codecov.io/gh/brettcannon/cpython-ci-test/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/brettcannon/cpython-ci-test
 
-
-Coveralls
----------
-
-.. image:: https://coveralls.io/repos/github/brettcannon/cpython-ci-test/badge.svg?branch=master
-    :target: https://coveralls.io/github/brettcannon/cpython-ci-test?branch=master
+`Coveralls <https://coveralls.io/github/brettcannon/cpython-ci-test?branch=master>`__ was considered, but `Codecov was chosen <https://mail.python.org/pipermail/core-workflow/2016-November/000719.html>`__ in the end.
 
 
 This is Python version 3.7.0 alpha 1
