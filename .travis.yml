@@ -68,8 +68,13 @@ before_script:
   - make -j4
 
 script:
-  # `-r -w` implicitly provided through `make test`.
-  - make test TESTOPTS="-uall -j4"
+  # `-r -w` implicitly provided through `make buildbottest`.
+  - make buildbottest TESTOPTS="-j4"
 
 notifications:
   email: false
+  irc:
+    channels:
+      - "irc.freenode.net#python-dev"
+    on_success: change
+    on_failure: always
